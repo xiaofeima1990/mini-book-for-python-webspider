@@ -393,6 +393,7 @@ class Queue_Frame():
     def test_print(self):
         print "Queue start"
                     
+                    
 ### 多线程工作函数 ###
 
 def webs_record(driver,link,count_url):
