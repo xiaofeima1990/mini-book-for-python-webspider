@@ -41,6 +41,7 @@ while 1:
 
 python主要通过threading 和thread模块对线程进行操作，里面最为重要的函数为run()(存储工作函数)和start()(启动线程活动)。下面的例子就是threading 进行线程的操作
 
+
 ```python
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
@@ -79,6 +80,7 @@ thread2.start()
 
 
 ```
+
 ### 加锁和同步
 多线程会遇到同步性的问题，多个线程对同一个数据存储空间进行修改会出现不可预料的后果，为保证数据正确性，需要“加锁”和同步操作
 
@@ -254,7 +256,6 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 ### 初始化和相关变量声明 ###
-
 
 list_content=[
         u"行政区",
