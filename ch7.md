@@ -255,6 +255,7 @@ sys.setdefaultencoding('utf-8')
 
 ### 初始化和相关变量声明 ###
 
+
 list_content=[
         u"行政区",
         u"电子监管号",
