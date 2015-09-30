@@ -3,7 +3,10 @@
 
 * 登录人人获取状态信息
 * 摘取人人好友列表
+* 抓取图片信息
+* 下载文件
 
+```python
 #-*- coding: utf-8 -*-
 import time
 import sys
@@ -138,6 +141,8 @@ if __name__ == '__main__':
 ---
 ## 抓取某人好友列表
 
+
+```python
 # coding: utf-8
 import time
 import math
@@ -250,4 +255,4 @@ while (nowPage<=totalPage):
 	else:
 		statusSoup = BeautifulSoup(statusFile)
 
-
+```

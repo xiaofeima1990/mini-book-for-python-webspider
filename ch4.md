@@ -39,11 +39,13 @@ pip install beautifulsoup4
 当然可以从网站上直接下载源码进行本地安装 
 
 https://pypi.python.org/pypi/beautifulsoup4/4.3.2
+
 ```
 pip install setup.py -build
 ```
 
 接下来我们运用官方文档给出的例子来进行说明和介绍
+
 ```python
 html_doc = """
 <html><head><title>The Dormouse's story</title></head>
@@ -101,7 +103,7 @@ print soup.prettify()# 格式化输出
 #  </body>
 # </html>
 ```
-beautifulsoup 提供了丰富的导航索引方法。可以直接**.title**获取 < title \>标签，若想获取标签内容，可以通过**.title.string**得到，想要查询上一级标签，可以通过**.title.parent**方式。因为beautifulsoup可以比较完善解析html,所以可以通过.p, .a等方式选取html文档中的段落（p）、链接（a）标签。同时可以通过**find_all('a')**等一系列函数查找到所有 < a \>标签等信息。
+beautifulsoup 提供了丰富的导航索引方法。可以直接**.title**获取  title 标签，若想获取标签内容，可以通过**.title.string**得到，想要查询上一级标签，可以通过**.title.parent**方式。因为beautifulsoup可以比较完善解析html,所以可以通过.p, .a等方式选取html文档中的段落（p）、链接（a）标签。同时可以通过**find_all('a')**等一系列函数查找到所有a标签等信息。
 
 
 ```python 
@@ -135,7 +137,7 @@ soup.find(id="link3")
 # <a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>
 
 ```
-beautifulsoup 提供了丰富的导航索引方法。可以直接**.title**获取 < title \> 标签，若想获取标签内容，可以通过**.title.string**得到，想要查询上一级标签，可以通过**.title.parent**方式。因为beautifulsoup可以比较完善解析html,所以可以通过.p, .a等方式选取html文档中的段落（p）、链接（a）标签。同时可以通过**find_all('a')**等一系列函数查找到所有 \< a \>标签等信息。下面将分别详细介绍
+beautifulsoup 提供了丰富的导航索引方法。可以直接**.title**获取 title  标签，若想获取标签内容，可以通过**.title.string**得到，想要查询上一级标签，可以通过**.title.parent**方式。因为beautifulsoup可以比较完善解析html,所以可以通过.p, .a等方式选取html文档中的段落（p）、链接（a）标签。同时可以通过**find_all('a')**等一系列函数查找到所有  a 标签等信息。下面将分别详细介绍
 
 ### 文档处理与信息挖掘
 
@@ -150,12 +152,14 @@ Beautiful Soup将复杂HTML文档转换成一个复杂的树形结构,每个节�
 
 #### Tag
 Tag 这里其实就是html 语言中各种标签。下面 title, a 等等HTML标签加上里面包括的内容就是 Tag。运用beautifulsoup可以很容易导出
+
 ```html 
 <title>The Dormouse's story</title>
 <a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>
 ```
 
 我们可以利用 soup加标签名轻松地获取这些标签的内容，这比利用正则表达式提取要方便很多。但注意，它查找的是在所有内容中的第一个符合要求的标签，如果要查询所有的标签，我们在后面进行介绍。
+
 ```python 
 tag = soup.b
 type(tag)
@@ -362,6 +366,8 @@ for sibling in soup.a.next_siblings:
     * 得到同一级的所有兄弟节点，以迭代形式给出。
 * .next_element  .previous_element 属性
     * 与 之前的不同，它并不是针对于兄弟节点，而是在所有节点，不分层次
+
+
 ```python
 for element in last_a_tag.next_elements:
     print(repr(element))
@@ -568,3 +574,5 @@ print soup.select('p a[href="http://example.com/elsie"]')
 
 
 ```
+
+### 其他重要功能
