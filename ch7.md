@@ -41,6 +41,7 @@ while 1:
 
 python主要通过threading 和thread模块对线程进行操作，里面最为重要的函数为run()(存储工作函数)和start()(启动线程活动)。下面的例子就是threading 进行线程的操作
 
+
 ```python
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
@@ -79,6 +80,7 @@ thread2.start()
 
 
 ```
+
 ### 加锁和同步
 多线程会遇到同步性的问题，多个线程对同一个数据存储空间进行修改会出现不可预料的后果，为保证数据正确性，需要“加锁”和同步操作
 
@@ -227,13 +229,14 @@ print "Exiting Main Thread"
 * 获取信息
 * 保存数据
 
-把爬虫嵌入到多线程框架，无论是利用传统的urllib还是高级的mechanize 甚至是selenium。操作的关键就在于线程的**工作函数** 上述的步骤都是在工作函数中完成的。此外，对于多线程以及爬虫来说，更为关键的地方在于错误处理与错误恢复。爬虫最为消耗时间的地方就是错误处理过程了。这一方面需要技巧、经验与艺术的结合。下面的例子是针对landchina.com土地交易信息的抓取。供大家参考：
+把爬虫嵌入到多线程框架，无论是利用传统的urllib还是高级的mechanize 甚至是selenium。操作的关键就在于线程的**工作函数** 上述的步骤都是在工作函数中完成的。此外，对于多线程以及爬虫来说，更为关键的地方在于错误处理与错误恢复。爬虫最为消耗时间的地方就是错误处理过程了。这一方面需要技巧、经验与艺术的结合。下面的例子是针对www.landchina.com 土地交易信息的抓取。供大家参考：
 
 
 
-```python
 
-### 引用程序包####
+```python 
+
+###引用程序包####
 import sys as sys
 import codecs
 import time, re
@@ -392,6 +395,7 @@ class Queue_Frame():
         
     def test_print(self):
         print "Queue start"
+                    
                     
 ### 多线程工作函数 ###
 
