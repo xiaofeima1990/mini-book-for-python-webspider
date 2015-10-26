@@ -225,6 +225,7 @@ urllib.urlretrieve(url,local,Schedule)
 
 **一个简单的例子**
 
+```python
 # coding: utf-8
 import urllib,urllib2
 #help(urllib2)
@@ -247,3 +248,4 @@ print gic
 
 #content = html.read().decode('gbk','ignore').encode('utf-8')
 # print content
+```

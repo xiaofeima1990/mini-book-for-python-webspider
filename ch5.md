@@ -136,9 +136,9 @@ if __name__ == '__main__':
     renrenLogin.login()
     renrenLogin.getStatus() 
 
+```
 
----
----
+
 ## 抓取某人好友列表
 
 
